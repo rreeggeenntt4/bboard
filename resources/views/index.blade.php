@@ -1,6 +1,6 @@
 @extends(loyauts.app)
 
-@section('title', $bb->title)
+@section('title', 'Главная')
 
 $section('content')
 @foreach($bbs as $bb)
