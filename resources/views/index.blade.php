@@ -8,15 +8,16 @@
     <title>Объявления</title>
 
     <!-- Fonts -->
-<!--     <link rel="preconnect" href="https://fonts.bunny.net">
+    <!--     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" /> -->
 
     <!-- Styles -->
-    
+
 </head>
 
 <body class="container">
-    
+    <h1 class="my-3 text-center">Объявления</h1>
+    <table class="table table-striped table-borderless"></table>
 </body>
 
 </html>
