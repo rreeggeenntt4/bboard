@@ -9,15 +9,19 @@ class BbsController extends Controller
 {
     public function index()
     {
-        $bbs = Bb::latest()->get();
+
+        $content = ['bbs' => Bb::latest()->get()];
+
+        /* $bbs = Bb::latest()->get();
         $s = "Объявления\r\n\r\n";
         foreach ($bbs as $bb) {
             $s .= $bb->title . "\r\n";
             $s .= $bb->price . " руб.\r\n";
             $s .= "\r\n";
-        }
-        return response($s)
-            ->header('Content-Type', 'text/plain');
+        } */
+        /* return response($s)
+            ->header('Content-Type', 'text/plain'); */
+        return view('index', $content);
     }
 
     public function detail(Bb $bb)
