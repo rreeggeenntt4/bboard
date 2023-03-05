@@ -5,7 +5,6 @@
 @section('content')
 
 @if (count($bbs) > 0)
-<h1 class="my-3 text-center">Объявления</h1>
 <table class="table table-striped table-borderless">
     <thead>
         <tr>
