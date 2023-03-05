@@ -18,6 +18,22 @@
 <body class="container">
     <h1 class="my-3 text-center">Объявления</h1>
     <table class="table table-striped table-borderless"></table>
+    <thead>
+        <tr>
+            <th>Товар</th>
+            <th>Цена, руб.</th>
+            <th>&nbsp</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><h4></h4></td>
+            <td></td>
+            <td>
+                <a href="">Подробнее ...</a>
+            </td>
+        </tr>
+    </tbody>
 </body>
 
 </html>
