@@ -1,4 +1,4 @@
-@extends(loyauts.app)
+@extends(loyouts.app)
 
 @section('title', 'Главная')
 
