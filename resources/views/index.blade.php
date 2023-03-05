@@ -2,7 +2,7 @@
 
 @section('title', 'Главная')
 
-$section('content')
+@section('content')
 @foreach($bbs as $bb)
 <h2>{{$bb->title}}</h2>
 <p>{{$bb->content}}</p>
