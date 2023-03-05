@@ -9,7 +9,6 @@ class BbsController extends Controller
 {
     public function index()
     {
-
         $content = ['bbs' => Bb::latest()->get()];
 
         /* $bbs = Bb::latest()->get();
