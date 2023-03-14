@@ -59,6 +59,7 @@ class HomeController extends Controller
 
     public function destroy(Bb $bb)
     {
+        $bb->delete();
         return redirect()->route('home');
     }
 }
