@@ -26,10 +26,10 @@ Route::post('/home', [App\Http\Controllers\HomeController::class, 'store'])->nam
 
 
 /* Страница с веб формой для правки объявления */
-Route::get('/home/{bb}/edit', [App\Http\Controllers\HomeController::class, 'edit'])->name('bb.edit');
+Route::get('/home/{bb}/edit', [App\Http\Controllers\HomeController::class, 'edit'])->name('bb.edit')->middleware('can:update,bb');
 /* Сохраняем исправленное объявление */
-Route::patch('/home/{bb}', [App\Http\Controllers\HomeController::class, 'update'])->name('bb.update');
+Route::patch('/home/{bb}', [App\Http\Controllers\HomeController::class, 'update'])->name('bb.update')->middleware('can:update,bb');
 /* Вывод страницы удаления объявления */
-Route::get('/home/{bb}/delete', [App\Http\Controllers\HomeController::class, 'delete'])->name('bb.delete');
+Route::get('/home/{bb}/delete', [App\Http\Controllers\HomeController::class, 'delete'])->name('bb.delete')->middleware('can:destroy,bb');
 /* Удаляем объявление */
-Route::delete('/home/{bb}/destroy', [App\Http\Controllers\HomeController::class, 'destroy'])->name('bb.destroy');
+Route::delete('/home/{bb}/destroy', [App\Http\Controllers\HomeController::class, 'destroy'])->name('bb.destroy')->middleware('can:destroy,bb');
