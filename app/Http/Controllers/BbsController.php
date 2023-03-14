@@ -50,6 +50,8 @@ class BbsController extends Controller
     {
         /* var_dump("hello"); */
         $s = "Hello World";
-        dd($s);
+        /* dd($s); */
+
+        return view('url');
     }
 }
