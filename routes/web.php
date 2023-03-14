@@ -17,3 +17,9 @@ use App\Http\Controllers\BbsController;
 
 Route::get('/', [BbsController::class, 'index'])->name('index');
 Route::get('/{bb}', [BbsController::class, 'detail'])->name('detail');
+Route::get('/create', [BbsController::class, 'create'])->name('create');
+
+
+Route::get('/test', [BbsController::class, 'test']);
+
+/* Route::get('/action', [BbsController::class, 'action'])->name('action'); */

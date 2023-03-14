@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Bb;
+use Illuminate\Support\Facades\Request as FacadesRequest;
 
 class BbsController extends Controller
 {
@@ -31,5 +32,38 @@ class BbsController extends Controller
         return response($s)
             ->header('Content-Type', 'text/plain'); */
         return view('detail', ['bb' => $bb]);
+    }
+
+    public function create()
+    {
+        /* $s = $bb->title . "\r\n";
+        $s .= $bb->content . " руб.\r\n";
+        $s .= $bb->price . " руб.\r\n";
+        return response($s)
+            ->header('Content-Type', 'text/plain'); */
+
+
+
+        return view('create');
+    }
+
+    // public function action(Request $request)
+    // {
+    //     $title = $request->title;
+    //     $content = $request->content;
+    //     $price = $request->price;
+
+    //     dd($title);
+
+    //     return view('create');
+    // }
+
+    public function test()
+    {
+        var_dump("hello");
+        $s = "Hello World";
+        dd($s);
+        return response($s)
+            ->header('Content-Type', 'text/plain');
     }
 }
