@@ -14,6 +14,6 @@ Laravel v10.2.0 (PHP v8.2.3)
           php artisan lang:add ru
 
           php artisan lang:update
-          
 
-    далее config\app.php => 'locale' => 'ru',
+
+далее config\app.php => 'locale' => 'ru',
