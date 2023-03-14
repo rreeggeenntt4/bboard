@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BbsController;
-
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +18,18 @@ use App\Http\Controllers\BbsController;
 Route::get('/', [BbsController::class, 'index'])->name('index');
 Route::get('/advertisement/{bb}', [BbsController::class, 'detail'])->name('detail');
 Route::get('/url', [BbsController::class, 'url']);
-Auth::routes();
 
+Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home/ceate', [App\Http\Controllers\HomeController::class, 'create'])->name('bb.create');
+Route::post('/home', [App\Http\Controllers\HomeController::class, 'store'])->name('bb.store');
+
+
+/* Страница с веб формой для правки объявления */
+Route::get('/home/{bb}/edit', [App\Http\Controllers\HomeController::class, 'edit'])->name('bb.edit');
+/* Сохраняем исправленное объявление */
+Route::patch('/home/{bb}', [App\Http\Controllers\HomeController::class, 'update'])->name('bb.update');
+/* Вывод страницы удаления объявления */
+Route::get('/home/{bb}/delete', [App\Http\Controllers\HomeController::class, 'delete'])->name('bb.delete');
+/* Удаляем объявление */
+Route::delete('/home/{bb}/destroy', [App\Http\Controllers\HomeController::class, 'destroy'])->name('bb.destroy');
