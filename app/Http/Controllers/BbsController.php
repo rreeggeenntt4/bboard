@@ -12,7 +12,7 @@ class BbsController extends Controller
     public function index()
     {
         /* $content = ['bbs' => Bb::latest()->get()]; */
-        $bbs = Bb::latest()->paginate(5, ['*']);
+        $bbs = Bb::orderBy('title')->latest()->paginate(5, ['*']);
         $content = ['bbs' => $bbs];
 
         /* $bbs = Bb::latest()->get();
