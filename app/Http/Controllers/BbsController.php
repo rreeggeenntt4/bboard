@@ -11,7 +11,9 @@ class BbsController extends Controller
 {
     public function index()
     {
-        $content = ['bbs' => Bb::latest()->get()];
+        /* $content = ['bbs' => Bb::latest()->get()]; */
+        $bbs = Bb::latest()->paginate(5, ['*']);
+        $content = ['bbs' => $bbs];
 
         /* $bbs = Bb::latest()->get();
         $s = "Объявления\r\n\r\n";

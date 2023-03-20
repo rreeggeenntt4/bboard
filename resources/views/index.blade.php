@@ -27,6 +27,15 @@
         @endforeach
     </tbody>
 </table>
+
+<style>
+    .page-item:not(:first-child) .page-link {
+        margin-left: -2px;
+    }
+</style>
+{{ $bbs->links('vendor.pagination.bootstrap-5') }}
+
+
 @endif
 
 @endsection('content')
